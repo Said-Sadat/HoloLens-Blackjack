@@ -1,0 +1,11 @@
+﻿  pch.cpp
+  App.cpp
+  Main.cpp
+  UnityGenerated.cpp
+C:\Users\mozzy\OneDrive\Documents\GitKraken Repos\21\App\21\App.cpp(26,41): warning C4973: 'Windows::UI::ViewManagement::IApplicationView2::SuppressSystemOverlays::set': marked as deprecated
+C:\Users\mozzy\OneDrive\Documents\GitKraken Repos\21\App\21\App.cpp(26,41): message : Message: 'Use the TryEnterFullScreen method and IsFullScreenMode property instead of SuppressSystemOverlays. For more info, see MSDN.'
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 160 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  21.vcxproj -> C:\Users\mozzy\OneDrive\Documents\GitKraken Repos\21\App\build\bin\Win32\Release\21.exe
