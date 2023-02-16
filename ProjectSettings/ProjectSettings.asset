@@ -164,7 +164,7 @@ PlayerSettings:
       protectedContext: 0
       v2Signing: 1
     enable360StereoCapture: 0
-  isWsaHolographicRemotingEnabled: 1
+  isWsaHolographicRemotingEnabled: 0
   enableFrameTimingStats: 0
   useHDRDisplay: 0
   D3DHDRBitDepth: 0
@@ -639,7 +639,7 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: Template_3D
   metroPackageVersion: 
-  metroCertificatePath: C:\Users\mozzy\OneDrive\Documents\GitKraken Repos\21\Assets\WSATestCertificate.pfx
+  metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: 
   metroCertificateSubject: DefaultCompany
   metroCertificateIssuer: DefaultCompany
