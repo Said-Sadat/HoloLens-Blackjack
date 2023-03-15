@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class ScoreKeeper : MonoBehaviour
 {
+    [SerializeField] CardsScriptableObject cardsSO;
+
     int playerScore;
     int dealerScore;
 
@@ -20,8 +22,13 @@ public class ScoreKeeper : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void AddToPlayerScore(int count)
+    public void AddToPlayerScore(string cardname)
     {
+        int count = 0;
+        
+        count = cardsSO.Cards.Find(x => 
+            x.CardTargetName.Contains(cardname)).CardValue;
+
         playerScore += count;
         OnPlayerScoreUpdated?.Invoke();
     }

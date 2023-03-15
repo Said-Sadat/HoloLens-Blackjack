@@ -1,11 +1,17 @@
 ﻿using UnityEngine;
+using Vuforia;
 
 public class CardTarget : MonoBehaviour
 {
-    [SerializeField] int cardValue;
+    ImageTargetBehaviour targetBehaviour;
+
+    void Awake()
+    {
+        targetBehaviour = GetComponent<ImageTargetBehaviour>();
+    }
 
     public void CardRevealed()
     {
-        ScoreKeeper.Instance.AddToPlayerScore(cardValue);
+        ScoreKeeper.Instance.AddToPlayerScore(targetBehaviour.ImageTarget.Name);
     }
 }
