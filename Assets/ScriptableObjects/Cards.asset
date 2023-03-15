@@ -14,5 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cards:
   - cardImageTargetName:
-    - 2Spades
-    cardValue: 4
+    - 2S
+    cardValue: 2
+  - cardImageTargetName:
+    - 5D
+    cardValue: 5
+  - cardImageTargetName:
+    - KS
+    cardValue: 10
