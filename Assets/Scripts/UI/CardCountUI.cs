@@ -13,7 +13,7 @@ public class CardCountUI : MonoBehaviour
     void UpdateCardCount()
     {
         if (cardCountText != null)
-            cardCountText.text = "Card Count: " + ScoreKeeper.Instance.PlayerScore.ToString();
+            cardCountText.text = "Hand: " + ScoreKeeper.Instance.PlayerScore.ToString();
     }
 
     private void OnDisable()

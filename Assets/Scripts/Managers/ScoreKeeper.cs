@@ -10,6 +10,7 @@ public class ScoreKeeper : MonoBehaviour
 
     public static ScoreKeeper Instance;
     public Action OnPlayerScoreUpdated;
+    public Action<string> OnResult;
 
     public int PlayerScore => playerScore;
     public int DealerScore => dealerScore;
@@ -31,6 +32,8 @@ public class ScoreKeeper : MonoBehaviour
 
         playerScore += count;
         OnPlayerScoreUpdated?.Invoke();
+
+        DetermineResult(playerScore);
     }
 
     public void AddToDealerScore(int count)
@@ -42,5 +45,22 @@ public class ScoreKeeper : MonoBehaviour
     {
         playerScore = 0;
         dealerScore = 0;
+
+        OnPlayerScoreUpdated?.Invoke();
+        DetermineResult(-1);
+    }
+
+    void DetermineResult(int handvalue)
+    {
+        if(handvalue == 21)
+        {
+            OnResult?.Invoke("Win!");
+        }
+        else if(handvalue > 21)
+        {
+            OnResult?.Invoke("Bust...");
+        }
+        if (handvalue == -1)
+            OnResult?.Invoke("");
     }
 }
