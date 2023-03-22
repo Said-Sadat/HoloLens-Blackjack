@@ -7,13 +7,16 @@ public class ScoreKeeper : MonoBehaviour
 
     int playerScore;
     int dealerScore;
+    int winStreak;
 
     public static ScoreKeeper Instance;
     public Action OnPlayerScoreUpdated;
     public Action<string> OnResult;
+    public Action WinStreakUpdated;
 
     public int PlayerScore => playerScore;
     public int DealerScore => dealerScore;
+    public int WinStreak => winStreak;
 
     private void Awake()
     {
@@ -55,12 +58,16 @@ public class ScoreKeeper : MonoBehaviour
         if(handvalue == 21)
         {
             OnResult?.Invoke("Win!");
+            winStreak++;
         }
         else if(handvalue > 21)
         {
             OnResult?.Invoke("Bust...");
+            winStreak = 0;
         }
         if (handvalue == -1)
             OnResult?.Invoke("");
+
+        WinStreakUpdated?.Invoke();
     }
 }

@@ -16,7 +16,8 @@ MonoBehaviour:
   - cardImageTargetName:
     - KS
     - JS
+    - QS
     cardValue: 10
   - cardImageTargetName:
-    - QS
+    - AS
     cardValue: 1
