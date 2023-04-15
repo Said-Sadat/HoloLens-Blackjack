@@ -13,6 +13,7 @@ public class ScoreKeeper : MonoBehaviour
     public Action OnPlayerScoreUpdated;
     public Action<string> OnResult;
     public Action WinStreakUpdated;
+    public Action OnReset;
 
     public int PlayerScore => playerScore;
     public int DealerScore => dealerScore;
@@ -30,10 +31,17 @@ public class ScoreKeeper : MonoBehaviour
     {
         int count = 0;
         
-        count = cardsSO.Cards.Find(x => 
-            x.CardTargetName.Contains(cardname)).CardValue;
+        count = GetCardValue(cardname);
 
         playerScore += count;
+        OnPlayerScoreUpdated?.Invoke();
+
+        DetermineResult(playerScore);
+    }
+
+    public void AddToPlayerScore(int value)
+    {
+        playerScore += value;
         OnPlayerScoreUpdated?.Invoke();
 
         DetermineResult(playerScore);
@@ -51,6 +59,8 @@ public class ScoreKeeper : MonoBehaviour
 
         OnPlayerScoreUpdated?.Invoke();
         DetermineResult(-1);
+
+        OnReset?.Invoke();
     }
 
     void DetermineResult(int handvalue)
@@ -69,5 +79,11 @@ public class ScoreKeeper : MonoBehaviour
             OnResult?.Invoke("");
 
         WinStreakUpdated?.Invoke();
+    }
+
+    public int GetCardValue(string cardname)
+    {
+        return cardsSO.Cards.Find(x =>
+            x.CardTargetName.Contains(cardname)).CardValue; 
     }
 }
