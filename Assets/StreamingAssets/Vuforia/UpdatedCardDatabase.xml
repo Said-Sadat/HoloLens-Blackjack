@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="QS" size="0.640000 0.454332" />
+    <ImageTarget name="KS" size="0.640000 0.456348" />
+    <ImageTarget name="JS" size="0.640000 0.457846" />
+    <ImageTarget name="AS" size="0.640000 0.455207" />
+    <ImageTarget name="10S" size="0.640000 0.457143" />
+    <ImageTarget name="9S" size="0.640000 0.458378" />
+    <ImageTarget name="8S" size="0.640000 0.456879" />
+    <ImageTarget name="7S" size="0.640000 0.459788" />
+    <ImageTarget name="6S" size="0.640000 0.457231" />
+    <ImageTarget name="5S" size="0.640000 0.455290" />
+    <ImageTarget name="4S" size="0.640000 0.456085" />
+    <ImageTarget name="3S" size="0.640000 0.457055" />
+    <ImageTarget name="2S" size="0.640000 0.455207" />
+    <ImageTarget name="QH" size="0.640000 0.456000" />
+    <ImageTarget name="KH" size="0.640000 0.456967" />
+    <ImageTarget name="JH" size="0.640000 0.459077" />
+    <ImageTarget name="AH" size="0.640000 0.458287" />
+    <ImageTarget name="10H" size="0.640000 0.461367" />
+    <ImageTarget name="9H" size="0.640000 0.458112" />
+    <ImageTarget name="8H" size="0.640000 0.457143" />
+    <ImageTarget name="7H" size="0.640000 0.455739" />
+    <ImageTarget name="6H" size="0.640000 0.459345" />
+    <ImageTarget name="5H" size="0.640000 0.458462" />
+    <ImageTarget name="4H" size="0.640000 0.459251" />
+    <ImageTarget name="3H" size="0.640000 0.459265" />
+    <ImageTarget name="2H" size="0.640000 0.455739" />
+    <ImageTarget name="QD" size="0.640000 0.457406" />
+    <ImageTarget name="KD" size="0.640000 0.457671" />
+    <ImageTarget name="JD" size="0.640000 0.459077" />
+    <ImageTarget name="AD" size="0.640000 0.456000" />
+    <ImageTarget name="10D" size="0.640000 0.460923" />
+    <ImageTarget name="9D" size="0.640000 0.457231" />
+    <ImageTarget name="8D" size="0.640000 0.458462" />
+    <ImageTarget name="7D" size="0.640000 0.458021" />
+    <ImageTarget name="6D" size="0.640000 0.456085" />
+    <ImageTarget name="5D" size="0.640000 0.457319" />
+    <ImageTarget name="4D" size="0.640000 0.459440" />
+    <ImageTarget name="3D" size="0.640000 0.456792" />
+    <ImageTarget name="2D" size="0.640000 0.457582" />
+    <ImageTarget name="QC" size="0.640000 0.456439" />
+    <ImageTarget name="KC" size="0.640000 0.456792" />
+    <ImageTarget name="JC" size="0.640000 0.457406" />
+    <ImageTarget name="AC" size="0.640000 0.458810" />
+    <ImageTarget name="10C" size="0.640000 0.459077" />
+    <ImageTarget name="9C" size="0.640000 0.457406" />
+    <ImageTarget name="8C" size="0.640000 0.458021" />
+    <ImageTarget name="7C" size="0.640000 0.456705" />
+    <ImageTarget name="6C" size="0.640000 0.458021" />
+    <ImageTarget name="5C" size="0.640000 0.457671" />
+    <ImageTarget name="4C" size="0.640000 0.455479" />
+    <ImageTarget name="3C" size="0.635000 0.453223" />
+    <ImageTarget name="2C" size="0.635000 0.454880" />
+  </Tracking>
+</QCARConfig>
