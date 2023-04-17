@@ -17,7 +17,65 @@ MonoBehaviour:
     - KS
     - JS
     - QS
+    - 10S
+    - KH
+    - QH
+    - JH
+    - 10H
+    - KD
+    - QD
+    - JD
+    - 10D
+    - KC
+    - QC
+    - JC
+    - 10C
     cardValue: 10
   - cardImageTargetName:
-    - AS
-    cardValue: 1
+    - 9S
+    - 9C
+    - 9D
+    - 9H
+    cardValue: 9
+  - cardImageTargetName:
+    - 8S
+    - 8C
+    - 8D
+    - 8H
+    cardValue: 8
+  - cardImageTargetName:
+    - 7S
+    - 7C
+    - 7D
+    - 7H
+    cardValue: 7
+  - cardImageTargetName:
+    - 6S
+    - 6C
+    - 6D
+    - 6H
+    cardValue: 6
+  - cardImageTargetName:
+    - 5S
+    - 5C
+    - 5D
+    - 5H
+    cardValue: 5
+  - cardImageTargetName:
+    - 4S
+    - 4C
+    - 4D
+    - 4H
+    cardValue: 4
+  - cardImageTargetName:
+    - 3S
+    - 3C
+    - 3D
+    - 3H
+    cardValue: 3
+  - cardImageTargetName:
+    - 2S
+    - 2C
+    - 2D
+    - 2H
+    cardValue: 2
