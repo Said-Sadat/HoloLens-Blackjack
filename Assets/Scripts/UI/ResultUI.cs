@@ -7,13 +7,32 @@ public class ResultUI : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI resultTextUI;
 
-    private void OnEnable()
+    Animator animator;
+
+    private void Awake()
     {
-        ScoreKeeper.Instance.OnResult += ShowResult;
+        animator = GetComponent<Animator>();
     }
 
-    void ShowResult(string result)
+    private void Start()
     {
-        resultTextUI.text = result;
+        ScoreKeeper.Instance.PlayerWin += ShowResult;
+        ScoreKeeper.Instance.OnReset += ResetResult;
+    }
+
+    void ShowResult(bool playerwin)
+    {
+        if (playerwin)
+            resultTextUI.text = "You Win!";
+        else
+            resultTextUI.text = "Bust...";
+
+        animator.SetBool("PlayerWin", playerwin);
+    }
+
+    void ResetResult()
+    {
+        animator.SetBool("PlayerWin", false);
+        resultTextUI.text = "";
     }
 }

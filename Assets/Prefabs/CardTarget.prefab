@@ -49,14 +49,14 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 4bc5fd733b147194692297d23f623541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mTrackableName: QS
+  mTrackableName: AS
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/CardsDatabase.xml
-  mAspectRatio: 1.4135168
+  mAspectRatio: 0.696967
   mImageTargetType: 0
-  mWidth: 0.06
-  mHeight: 0.084811
-  mRuntimeTexture: {fileID: 2800000, guid: 7660d9a2fbaa58842b8ca1d32bcd691f, type: 3}
+  mWidth: 0.091
+  mHeight: 0.063424
+  mRuntimeTexture: {fileID: 0}
 --- !u!114 &1120051234754804104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a917f0af64a6423093132dab321c15f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
+  StatusFilter: 0
   OnTargetFound:
     m_PersistentCalls:
       m_Calls:

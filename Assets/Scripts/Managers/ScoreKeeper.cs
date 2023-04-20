@@ -11,7 +11,7 @@ public class ScoreKeeper : MonoBehaviour
 
     public static ScoreKeeper Instance;
     public Action OnPlayerScoreUpdated;
-    public Action<string> OnResult;
+    public Action<bool> PlayerWin;
     public Action WinStreakUpdated;
     public Action OnReset;
 
@@ -63,20 +63,28 @@ public class ScoreKeeper : MonoBehaviour
         OnReset?.Invoke();
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            DetermineResult(21);
+        }
+    }
+
     void DetermineResult(int handvalue)
     {
         if(handvalue == 21)
         {
-            OnResult?.Invoke("Win!");
+            PlayerWin?.Invoke(true);
             winStreak++;
         }
         else if(handvalue > 21)
         {
-            OnResult?.Invoke("Bust...");
+            PlayerWin?.Invoke(false);
             winStreak = 0;
         }
-        if (handvalue == -1)
-            OnResult?.Invoke("");
+        //if (handvalue == -1)
+        //    PlayerWin?.Invoke("");
 
         WinStreakUpdated?.Invoke();
     }

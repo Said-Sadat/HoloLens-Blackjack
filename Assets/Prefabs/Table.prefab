@@ -145,6 +145,7 @@ GameObject:
   - component: {fileID: 4139872464907819665}
   - component: {fileID: 5909028606996564200}
   - component: {fileID: 5202429800102424851}
+  - component: {fileID: 2202088284220233006}
   m_Layer: 5
   m_Name: WinUI
   m_TagString: Untagged
@@ -198,7 +199,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: 'You Win
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f7d9756360abefe498f7f57ac7ac5fb3, type: 2}
   m_sharedMaterial: {fileID: 5441602356703516631, guid: f7d9756360abefe498f7f57ac7ac5fb3,
@@ -281,6 +284,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resultTextUI: {fileID: 5909028606996564200}
+--- !u!95 &2202088284220233006
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2979689811098507668}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d82eb7d91cb08f94abe6610b66a9708d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3598232902052614808
 GameObject:
   m_ObjectHideFlags: 0
