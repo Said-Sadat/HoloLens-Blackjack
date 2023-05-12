@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using Vuforia;
 
@@ -14,11 +13,13 @@ public class CardTarget : MonoBehaviour
     {
         targetBehaviour = GetComponent<ImageTargetBehaviour>();
         ScoreKeeper.Instance.OnReset += OnReset;
+        ScoreKeeper.Instance.PlayerWin += DisableCard;
     }
 
     public virtual void CardRevealed()
     {
         if (revealed) return;
+
         cardValueText.gameObject.SetActive(true);
         cardValueText.text = ScoreKeeper.Instance.GetCardValue(targetBehaviour.ImageTarget.Name).ToString();
         ScoreKeeper.Instance.AddToPlayerScore(targetBehaviour.ImageTarget.Name);
@@ -30,5 +31,10 @@ public class CardTarget : MonoBehaviour
     {
         revealed = false;
         cardValueText.gameObject.SetActive(false);
+    }
+
+    void DisableCard(bool playerwin)
+    {
+        revealed = true;
     }
 }

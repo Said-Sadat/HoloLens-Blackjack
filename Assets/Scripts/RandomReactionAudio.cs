@@ -1,30 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class RandomReactionAudio : MonoBehaviour
 {
-    [SerializeField] List<AudioClip> audioClips;
+    [SerializeField] List<AudioClip> winClips;
+    [SerializeField] List<AudioClip> loseClips;
     [SerializeField] List<AudioSource> sources;
 
-    float maxtime = 3f;
-    float timer;
-
-    private void Update()
+    private void Start()
     {
-        timer += Time.deltaTime;
-        if (timer >= maxtime)
-        {
-            PlayRandomAudio();
-            timer = 0f;
-        }
+        ScoreKeeper.Instance.PlayerWin += PlayRandomAudio;
     }
 
-    public void PlayRandomAudio()
+    public void PlayRandomAudio(bool playerwin)
     {
-        int randomIndex = Random.Range(0, audioClips.Count);
+        AudioClip audioclip;
+
+        if(playerwin)
+            audioclip = winClips[Random.Range(0, winClips.Count)];
+        else
+            audioclip = loseClips[Random.Range(0, loseClips.Count)];
+
         int randomSource = Random.Range(0, sources.Count);
 
-        sources[randomSource].PlayOneShot(audioClips[randomIndex]);
+        if(audioclip)
+            sources[randomSource].PlayOneShot(audioclip);
     }
+
+    private void OnDisable() =>
+        ScoreKeeper.Instance.PlayerWin -= PlayRandomAudio;
 }

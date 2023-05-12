@@ -199,9 +199,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You Win
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f7d9756360abefe498f7f57ac7ac5fb3, type: 2}
   m_sharedMaterial: {fileID: 5441602356703516631, guid: f7d9756360abefe498f7f57ac7ac5fb3,
@@ -658,6 +656,7 @@ GameObject:
   - component: {fileID: 4186474360617988904}
   - component: {fileID: 6698515519512425153}
   - component: {fileID: 1014288398405726278}
+  - component: {fileID: 223974227}
   m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
@@ -674,7 +673,7 @@ Transform:
   m_GameObject: {fileID: 6743483154195310788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.000001, z: 0.3}
+  m_LocalScale: {x: 0.375, y: 0.000001, z: 0.375}
   m_Children:
   - {fileID: 1152317094508299911}
   m_Father: {fileID: 0}
@@ -734,7 +733,18 @@ MonoBehaviour:
       m_Calls: []
   onPlacingStopped:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 223974227}
+        m_MethodName: OnTablePlaced
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!33 &4186474360617988904
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -795,6 +805,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.000000001, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &223974227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6743483154195310788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ba7889115002534692664dffff9570b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tapToPlace: {fileID: 6743483154195310793}
+  tableCollider: {fileID: 1014288398405726278}
 --- !u!1 &7918682127177399620
 GameObject:
   m_ObjectHideFlags: 0
@@ -1072,7 +1096,7 @@ GameObject:
   - component: {fileID: 7602868242841323199}
   - component: {fileID: 5064178148789167979}
   m_Layer: 5
-  m_Name: Image
+  m_Name: ResetButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1086,18 +1110,18 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8668162859715632767}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.084}
+  m_LocalPosition: {x: 0, y: 0, z: -0.08400001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1042280615190234282}
   m_Father: {fileID: 1152317094508299911}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.08826001, y: 0}
-  m_SizeDelta: {x: 0.02, y: 0.02}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0.020000003, y: 0.020000003}
+  m_Pivot: {x: 1, y: 0}
 --- !u!222 &4306442892347804063
 CanvasRenderer:
   m_ObjectHideFlags: 0

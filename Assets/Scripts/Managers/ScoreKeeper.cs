@@ -6,17 +6,16 @@ public class ScoreKeeper : MonoBehaviour
     [SerializeField] CardsScriptableObject cardsSO;
 
     int playerScore;
-    int dealerScore;
     int winStreak;
 
     public static ScoreKeeper Instance;
+
     public Action OnPlayerScoreUpdated;
     public Action<bool> PlayerWin;
     public Action WinStreakUpdated;
     public Action OnReset;
 
     public int PlayerScore => playerScore;
-    public int DealerScore => dealerScore;
     public int WinStreak => winStreak;
 
     private void Awake()
@@ -47,28 +46,13 @@ public class ScoreKeeper : MonoBehaviour
         DetermineResult(playerScore);
     }
 
-    public void AddToDealerScore(int count)
-    {
-        dealerScore += count;
-    }
-
     public void ResetScore()
     {
         playerScore = 0;
-        dealerScore = 0;
 
         OnPlayerScoreUpdated?.Invoke();
-        DetermineResult(-1);
 
         OnReset?.Invoke();
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            DetermineResult(21);
-        }
     }
 
     void DetermineResult(int handvalue)
@@ -83,8 +67,6 @@ public class ScoreKeeper : MonoBehaviour
             PlayerWin?.Invoke(false);
             winStreak = 0;
         }
-        //if (handvalue == -1)
-        //    PlayerWin?.Invoke("");
 
         WinStreakUpdated?.Invoke();
     }
